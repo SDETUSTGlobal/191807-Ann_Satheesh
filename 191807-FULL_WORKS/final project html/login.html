@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UST Login</title>
+    <style type="text/css">
+        *{
+            margin: 100;
+            padding: 0;
+        }
+        
+   
+        label{
+            width:400px;
+            display:inline-block;
+            margin:10px;
+            
+        }
+        #form{
+            border-radius: 10px;
+            background:black;
+            color:white;
+            width:350px;
+            padding:7px;
+            position:relative;
+            left:40%;
+            font-size: larger;
+            
+            
+        }
+        h2{
+            text-align:center;
+        }
+        button{
+            width:100%;
+            margin-top:10px;
+            font-weight:bold;
+            font-size: larger;
+
+        }
+        body{
+            background-image:url(photo.jpg);
+            
+            background-size: cover;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            
+        }
+    
+    </style>
+<script>
+    function passvalues()
+     {
+        var rfname=document.getElementById("fname").value;
+        localStorage.setItem("textvalue1",rfname)
+        var rlname=document.getElementById("lname").value;
+        localStorage.setItem("textvalue2",rlname)
+    
+        var ruid=document.getElementById("uid").value;
+        localStorage.setItem("textvalue3",ruid)
+    
+        var rconame=document.getElementById("coname").value;
+        localStorage.setItem("textvalue4",rconame)
+    
+        var rcoemail=document.getElementById("coemail").value;
+        localStorage.setItem("textvalue5",rcoemail)
+        return false;
+     }
+</script>
+    
+
+
+</head>
+
+
+<body>
+    <div id="form">
+        <h2>LOGIN</h2>
+    <form action ="display.html" method="GET">
+        <div>
+          <label for="First Name">First Name</label>
+          <input type="text" name="First Name" id="fname" placeholder="Enter your First Name" ><br><br>
+        </div>
+        <div>
+          <label for="Last Name">Last Name</label>
+          <input type="text" name="Last name" id="lname" placeholder="Enter your Last Name"><br><br>
+         
+        </div>
+        <div >
+          <label for="UID">UID</label>
+          <input type="number" name="UID" id="uid" placeholder="Enter your UID"><br><br>
+
+        </div>
+        <div>
+          <label for="Company Name">Company Name</label>
+          <input type="text" name="Company Name" id="coname" placeholder="Enter your company name"><br><br>
+          
+        </div>
+        <div>
+        <label for="Email">Email</label>
+        <input type="email" name="Email" id="coemail" placeholder="Enter your company mail id"><br><br>
+  
+        </div>
+          
+        <button type="submit" onclick="passvalues();"><a href="file:///C:/final project/display.html?"></a>Submit</button>
+          
+
+    </form>
+    </div>
+    
+    
+</body>
+</html>

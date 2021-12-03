@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    
+    <style type="text/css">
+        body{
+            background-image: url(connect.jpeg);
+            background-size: cover;
+        }
+    .welcome{
+        font-size:100px;
+        text-align:center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin:80px;
+    }
+    .login{
+        font-size:50px;
+        text-align:center;
+        font-family:unset;
+    }
+    .details{
+        font-weight: bolder;
+        font-size: 20px;
+        font-family:Arial, Helvetica, sans-serif;
+        text-align: left;
+    }
+  
+</style>
+</head>
+
+<body>
+  <h1 class="welcome">WELCOME TO UST</h1>
+  <h2 class="login">Login details</h2> 
+  <h3 class="details">
+ 
+      First Name:<span id="result-fname"></span>
+  </h3>
+  <h3 class="details">
+      Last Name:<span id="result-lname"></span>
+  </h3>
+  <h3 class="details">
+      UID:<span id="result-uid"></span>
+  </h3>
+  <h3 class="details">
+      Company Name:<span id="result-coname"></span>
+  </h3>
+  <h3 class="details">
+       Email:<span id="result-coemail"></span>
+  </h3>
+  
+  <script>
+    document.getElementById("result-fname").innerHTML=localStorage.getItem("textvalue1");
+    document.getElementById("result-lname").innerHTML=localStorage.getItem("textvalue2");
+    document.getElementById("result-uid").innerHTML=localStorage.getItem("textvalue3");
+    document.getElementById("result-coname").innerHTML=localStorage.getItem("textvalue4");
+    document.getElementById("result-coemail").innerHTML=localStorage.getItem("textvalue5");
+</script>
+    
+</body>
+</html>
